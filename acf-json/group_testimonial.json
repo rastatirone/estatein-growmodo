@@ -1,0 +1,47 @@
+{
+    "key": "group_testimonial",
+    "title": "Testimonial Details",
+    "fields": [
+        {
+            "key": "field_testi_client_name",
+            "label": "Client name",
+            "name": "client_name",
+            "type": "text",
+            "instructions": "Shown on testimonial cards. Falls back to post author display name if empty."
+        },
+        {
+            "key": "field_testi_location",
+            "label": "Client Location",
+            "name": "location",
+            "type": "text",
+            "instructions": "E.g., 'New York, USA'"
+        },
+        {
+            "key": "field_testi_rating",
+            "label": "Star Rating",
+            "name": "rating",
+            "type": "number",
+            "required": 1,
+            "default_value": 5,
+            "min": 1,
+            "max": 5
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "modified": 1777027200
+}

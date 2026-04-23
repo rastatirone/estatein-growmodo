@@ -1,0 +1,99 @@
+{
+    "key": "group_service_highlights",
+    "title": "Service Highlights",
+    "fields": [
+        {
+            "key": "field_service_highlight_cards",
+            "label": "Highlight cards",
+            "name": "service_highlight_cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Icon link tiles (e.g. Find Your Dream Home). Optional link wraps the whole card; the arrow uses the theme asset.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "layout": "block",
+            "button_label": "Add card",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "field_shl_title",
+            "sub_fields": [
+                {
+                    "key": "field_shl_icon",
+                    "label": "Icon image",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Small glyph over the decorative ring (PNG/SVG recommended).",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": { "width": "33.33", "class": "", "id": "" },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_service_highlight_cards"
+                },
+                {
+                    "key": "field_shl_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": true,
+                    "conditional_logic": false,
+                    "wrapper": { "width": "66.66", "class": "", "id": "" },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_service_highlight_cards"
+                },
+                {
+                    "key": "field_shl_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Optional. When set, the whole card is clickable.",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": { "width": "", "class": "", "id": "" },
+                    "return_format": "array",
+                    "parent_repeater": "field_service_highlight_cards"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Row of icon cards with decorative ring and corner arrow (desktop 1×4, mobile 2×2).",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777500000
+}

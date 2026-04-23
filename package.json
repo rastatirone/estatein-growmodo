@@ -1,0 +1,20 @@
+{
+  "name": "estatein-growmodo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind-output.css --minify",
+    "watch:tailwind": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind-output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

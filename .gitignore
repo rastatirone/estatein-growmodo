@@ -1,0 +1,8 @@
+# Cursor / VS Code IDE files
+.vscode/
+.cursor/
+.cursorrules
+/docs/
+
+# Node / Tailwind build
+node_modules/

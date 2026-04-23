@@ -1,0 +1,188 @@
+{
+    "key": "group_property_details",
+    "title": "Property Details",
+    "fields": [
+        {
+            "key": "field_tab_basic_info",
+            "label": "Basic Info",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_prop_price",
+            "label": "Listing Price",
+            "name": "price",
+            "type": "number",
+            "required": 1,
+            "prepend": "$"
+        },
+        {
+            "key": "field_prop_address",
+            "label": "Specific Street Address",
+            "name": "address",
+            "type": "text",
+            "instructions": "Enter the exact street address. (Use the 'Locations' taxonomy box on the right for City/State)."
+        },
+        {
+            "key": "field_prop_bedrooms",
+            "label": "Bedrooms",
+            "name": "bedrooms",
+            "type": "number",
+            "wrapper": { "width": "33.33" }
+        },
+        {
+            "key": "field_prop_bathrooms",
+            "label": "Bathrooms",
+            "name": "bathrooms",
+            "type": "number",
+            "wrapper": { "width": "33.33" }
+        },
+        {
+            "key": "field_prop_area",
+            "label": "Area",
+            "name": "area",
+            "type": "text",
+            "instructions": "E.g., 2,500 sqft",
+            "wrapper": { "width": "33.33" }
+        },
+        {
+            "key": "field_tab_media",
+            "label": "Media",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_prop_gallery",
+            "label": "Property Gallery",
+            "name": "gallery",
+            "type": "gallery",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_tab_features_pricing",
+            "label": "Features & Pricing",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_prop_features",
+            "label": "Key Features & Amenities",
+            "name": "features",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_prop_feature_name",
+                    "label": "Feature",
+                    "name": "feature_name",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_prop_pricing_categories",
+            "label": "Comprehensive Pricing Details",
+            "name": "pricing_categories",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Pricing Category (e.g., Additional Fees)",
+            "sub_fields": [
+                {
+                    "key": "field_prop_pricing_cat_title",
+                    "label": "Category Title",
+                    "name": "category_title",
+                    "type": "text",
+                    "instructions": "E.g., 'Additional Fees', 'Monthly Costs'"
+                },
+                {
+                    "key": "field_prop_pricing_fees",
+                    "label": "Fees",
+                    "name": "fees",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Add Fee",
+                    "sub_fields": [
+                        {
+                            "key": "field_prop_pricing_label",
+                            "label": "Fee Label",
+                            "name": "fee_label",
+                            "type": "text",
+                            "instructions": "E.g., Property Transfer Tax"
+                        },
+                        {
+                            "key": "field_prop_pricing_amount",
+                            "label": "Amount",
+                            "name": "amount",
+                            "type": "text",
+                            "prepend": "$"
+                        },
+                        {
+                            "key": "field_prop_pricing_desc",
+                            "label": "Fee Description",
+                            "name": "fee_description",
+                            "type": "text",
+                            "instructions": "Optional sub-text or tooltip description."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_tab_extras",
+            "label": "Extras",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_prop_faqs",
+            "label": "Property FAQs",
+            "name": "property_faqs",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Add FAQ",
+            "sub_fields": [
+                {
+                    "key": "field_prop_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text"
+                },
+                {
+                    "key": "field_prop_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea"
+                }
+            ]
+        },
+        {
+            "key": "field_prop_inquiry_email",
+            "label": "Inquiry Recipient Email",
+            "name": "inquiry_email",
+            "type": "email",
+            "instructions": "Optional: Specific email for inquiries. Defaults to global admin email if blank."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "property"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["custom_fields"],
+    "active": true,
+    "description": "Comprehensive property data mapping with nested pricing.",
+    "modified": 1776945600
+}

@@ -1,0 +1,252 @@
+{
+    "key": "group_page_card_sections",
+    "title": "Page Card Sections",
+    "fields": [
+        {
+            "key": "field_pcls_sections",
+            "label": "Card sections",
+            "name": "page_card_sections",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Add carousel-style sections (featured properties, testimonials, FAQ cards). Reorder as needed.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "layouts": {
+                "layout_pclsfp01": {
+                    "key": "layout_pclsfp01",
+                    "name": "featured_properties",
+                    "label": "Featured properties",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_pclsfp_title",
+                            "label": "Section title",
+                            "name": "section_title",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "key": "field_pclsfp_subtext",
+                            "label": "Section subtext",
+                            "name": "section_subtext",
+                            "type": "textarea",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_pclsfp_cta",
+                            "label": "Section CTA",
+                            "name": "section_cta",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_pclsfp_per_view",
+                            "label": "Cards per view (desktop)",
+                            "name": "cards_per_view",
+                            "type": "number",
+                            "default_value": 3,
+                            "min": 1,
+                            "max": 6,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_pclsfp_anchor",
+                            "label": "Section HTML id (optional)",
+                            "name": "section_html_id",
+                            "type": "text",
+                            "instructions": "Optional anchor, e.g. featured-properties (no #)."
+                        },
+                        {
+                            "key": "field_pclsfp_rel",
+                            "label": "Properties",
+                            "name": "properties",
+                            "type": "relationship",
+                            "post_type": [ "property" ],
+                            "taxonomy": "",
+                            "filters": [ "search" ],
+                            "return_format": "object",
+                            "min": 0,
+                            "max": 0,
+                            "elements": [ "featured_image" ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_pclstt01": {
+                    "key": "layout_pclstt01",
+                    "name": "testimonials",
+                    "label": "Testimonials",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_pclstt_title",
+                            "label": "Section title",
+                            "name": "section_title",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "key": "field_pclstt_subtext",
+                            "label": "Section subtext",
+                            "name": "section_subtext",
+                            "type": "textarea",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_pclstt_cta",
+                            "label": "Section CTA",
+                            "name": "section_cta",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_pclstt_per_view",
+                            "label": "Cards per view (desktop)",
+                            "name": "cards_per_view",
+                            "type": "number",
+                            "default_value": 3,
+                            "min": 1,
+                            "max": 6,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_pclstt_anchor",
+                            "label": "Section HTML id (optional)",
+                            "name": "section_html_id",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_pclstt_rel",
+                            "label": "Testimonials",
+                            "name": "testimonials",
+                            "type": "relationship",
+                            "post_type": [ "testimonial" ],
+                            "taxonomy": "",
+                            "filters": [ "search" ],
+                            "return_format": "object",
+                            "min": 0,
+                            "max": 0,
+                            "elements": [ "featured_image" ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_pclsfq01": {
+                    "key": "layout_pclsfq01",
+                    "name": "faq_cards",
+                    "label": "FAQ cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_pclsfq_title",
+                            "label": "Section title",
+                            "name": "section_title",
+                            "type": "text",
+                            "required": true
+                        },
+                        {
+                            "key": "field_pclsfq_subtext",
+                            "label": "Section subtext",
+                            "name": "section_subtext",
+                            "type": "textarea",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_pclsfq_cta",
+                            "label": "Section CTA",
+                            "name": "section_cta",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_pclsfq_per_view",
+                            "label": "Cards per view (desktop)",
+                            "name": "cards_per_view",
+                            "type": "number",
+                            "default_value": 3,
+                            "min": 1,
+                            "max": 6,
+                            "step": 1
+                        },
+                        {
+                            "key": "field_pclsfq_anchor",
+                            "label": "Section HTML id (optional)",
+                            "name": "section_html_id",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_pclsfq_items",
+                            "label": "FAQ items",
+                            "name": "faq_items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Add FAQ",
+                            "min": 0,
+                            "max": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_pclsfq_q",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "type": "text",
+                                    "required": true,
+                                    "parent_repeater": "field_pclsfq_items"
+                                },
+                                {
+                                    "key": "field_pclsfq_excerpt",
+                                    "label": "Answer excerpt",
+                                    "name": "excerpt",
+                                    "type": "textarea",
+                                    "rows": 4,
+                                    "new_lines": "wpautop",
+                                    "parent_repeater": "field_pclsfq_items"
+                                },
+                                {
+                                    "key": "field_pclsfq_read_more",
+                                    "label": "Read more link",
+                                    "name": "read_more",
+                                    "type": "link",
+                                    "return_format": "array",
+                                    "parent_repeater": "field_pclsfq_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add card section",
+            "min": 0,
+            "max": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Flexible card carousel sections for property listings, testimonials, and FAQs.",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777027200
+}

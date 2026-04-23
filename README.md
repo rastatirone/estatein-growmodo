@@ -6,6 +6,8 @@ Custom WordPress theme for the Estatein brand: dark UI, Advanced Custom Fields (
 **Text domain:** `estatein-growmodo`  
 **Version:** 1.0.0 (see `style.css` header)
 
+**Assessment / process write-up:** see [DEVELOPMENT-DOCUMENTATION.md](DEVELOPMENT-DOCUMENTATION.md) (development process, theme choices, plugins & tools).
+
 ---
 
 ## Requirements

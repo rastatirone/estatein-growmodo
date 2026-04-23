@@ -171,6 +171,16 @@ function estatein_growmodo_scripts() {
             true
         );
     }
+
+    if ( is_singular( 'property' ) ) {
+        wp_enqueue_script(
+            'estatein-property-detail',
+            get_template_directory_uri() . '/assets/js/property-detail.js',
+            array(),
+            wp_get_theme()->get( 'Version' ),
+            true
+        );
+    }
 }
 
 /**
@@ -343,6 +353,8 @@ function estatein_render_footer_nav_menu_link_li( $item ) {
 // Include Custom Post Types
 require get_template_directory() . '/inc/cpt-registration.php';
 require_once get_template_directory() . '/inc/card-loop-helpers.php';
+require_once get_template_directory() . '/inc/property-template-helpers.php';
+require_once get_template_directory() . '/inc/property-inquiry-handler.php';
 require_once get_template_directory() . '/inc/dummy-data-seed.php';
 
 /* ==========================================================================

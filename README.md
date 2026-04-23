@@ -45,7 +45,7 @@ Custom WordPress theme for the Estatein brand: dark UI, Advanced Custom Fields (
    Create **Properties** (`property` CPT) with **Property Details** ACF fields: price, address, bedrooms, bathrooms, area, gallery, features, pricing categories, property FAQs, inquiry email. Use taxonomies **Locations**, **Property Types**, **Statuses** where needed.
 
    - Public archive slug: **`/properties/`**  
-   - **Note:** A dedicated **`single-property.php`** template is not in this theme yet; single listings may use the generic fallback (`index.php`) until that template is added.
+   - **Single listing:** **`single-property.php`** renders the property detail layout (hero, gallery, description & stats, features, inquiry form, pricing breakdown, FAQs). Footer still includes the global **outro CTA** from Theme Settings.
 
 7. **Supporting content**
 
@@ -79,6 +79,11 @@ Custom WordPress theme for the Estatein brand: dark UI, Advanced Custom Fields (
 | `header.php` / `footer.php` | Site chrome, promo bar, nav, footer columns |
 | `page.php` | Default page: hero → service highlights → flexible card sections → content |
 | `index.php` | Generic fallback for archives/singles without a dedicated template |
+| `single-property.php` | Full property detail page |
+| `template-parts/single-property/content.php` | Property detail markup (ACF-driven) |
+| `inc/property-template-helpers.php` | Gallery normalization, stat formatting |
+| `inc/property-inquiry-handler.php` | `admin-post.php` handler for inquiry emails |
+| `assets/js/property-detail.js` | Gallery, “View all photos”, pricing toggles, FAQ expand |
 | `acf-json/` | Versioned ACF field group JSON (sync with DB) |
 | `inc/cpt-registration.php` | `property`, `team_member`, `testimonial` + property taxonomies |
 | `inc/card-loop-helpers.php` | Property card helpers (type label, price HTML, image URL + gallery fallback) |
@@ -115,6 +120,11 @@ Summarizes work shipped in this theme iteration (card loops, property UI, toolba
 
 - **`inc/dummy-data-seed.php`:** Tools screen **Estatein demo data**; seeds **nine** sample properties (richer pricing/FAQ on the first listing), testimonials (with **`client_name`**), and team members.
 - **Demo DB version `2`:** Fresh seed creates all nine; older **`1`** installs receive **six extra properties** once on admin load (no duplicate testimonials/team from that migration path).
+
+### Single property detail page
+
+- **`single-property.php`** — Hero (title, address, price), thumbnail strip (up to 9), two large images, “View all photos” expander, two-column description + key features, inquiry form (posts to `admin-post.php`, emails **`inquiry_email`** or site admin), pricing categories with “View details” rows, FAQ cards with “Read more”.
+- **`property-detail.js`** — Enqueued only on singular `property`.
 
 ### Other
 
